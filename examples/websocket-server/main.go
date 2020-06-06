@@ -30,6 +30,7 @@ func main() {
 	router.HandleFunc("/ws", wsHandler)
 	go boardcastEvents()
 
+	log.Printf("Starting Coordinate Server at :%d ", 8444)
 	log.Fatal(http.ListenAndServe(":8444", router))
 }
 
