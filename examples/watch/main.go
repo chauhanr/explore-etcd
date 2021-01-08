@@ -15,7 +15,7 @@ func main() {
 	})
 
 	if err != nil {
-		fmt.Errorf("Error connecting to etcd. %s\n", err)
+		fmt.Printf("Error connecting to etcd. %s\n", err)
 		return
 	}
 	defer cli.Close()
